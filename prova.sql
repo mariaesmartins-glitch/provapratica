@@ -138,14 +138,3 @@ from passagens
 group by classe
 order by classe;
 
-select
-p.nome as nome_passageiros,
-v.numero_voo,
-pa.assento,
-pa.valor
-from passagens pa
-join passageiros p ON pa.passageiros_id = p.id
-join voos v  on pa.voo_id = v.id
-where pa.classe = 'executiva'
-and pa.valor > 800.00
-order by pa.valor desc;
